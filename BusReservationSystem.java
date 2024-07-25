@@ -177,10 +177,10 @@ public class BusReservationSystem {
                 break;
             } catch (InputMismatchException e) {
                 System.out.println("Fare must be a number.");
-                input.nextLine(); // clear the invalid input
+                input.nextLine(); 
             } catch (IllegalArgumentException e) {
                 System.out.println(e.getMessage());
-                input.nextLine(); // clear the invalid input
+                input.nextLine(); 
             }
         }
 
@@ -314,7 +314,7 @@ public class BusReservationSystem {
                     System.out.println("Customer not found.");
                     continue;
                 }
-                break; // Mobile number is valid and customer is found
+                break; 
             } catch (IllegalArgumentException e) {
                 System.out.println(e.getMessage());
             }
@@ -328,13 +328,13 @@ public class BusReservationSystem {
                 if (!isNumeric(busNumber)) {
                     throw new IllegalArgumentException("Bus Number must be numeric.");
                 }
-                // Check if bus exists
+                
                 Bus bus = findBusByNumber(busNumber);
                 if (bus == null) {
                     System.out.println("Bus not found.");
-                    continue; // Prompt user again
+                    continue; 
                 }
-                break; // Bus number is valid and bus is found
+                break; 
             } catch (IllegalArgumentException e) {
                 System.out.println(e.getMessage());
             }
@@ -348,11 +348,11 @@ public class BusReservationSystem {
                 if (seatNumber < 1) {
                     throw new IllegalArgumentException("Seat number must be a positive integer.");
                 }
-                // Check if seat is available
+                
                 Bus bus = findBusByNumber(busNumber);
                 if (!bus.isSeatAvailable(seatNumber)) {
                     System.out.println("Seat is already booked.");
-                    continue; // Prompt user again
+                    continue;
                 }
                 // Book seat
                 bus.bookSeat(seatNumber);
@@ -378,13 +378,13 @@ public class BusReservationSystem {
                 if (!isNumeric(mobileNumber)) {
                     throw new IllegalArgumentException("Mobile Number must be numeric.");
                 }
-                // Check if customer exists
+               
                 Customer customer = findCustomerByMobile(mobileNumber);
                 if (customer == null) {
                     System.out.println("Customer not found.");
-                    continue; // Prompt user again
+                    continue; 
                 }
-                break; // Mobile number is valid and customer is found
+                break; 
             } catch (IllegalArgumentException e) {
                 System.out.println(e.getMessage());
             }
@@ -402,9 +402,9 @@ public class BusReservationSystem {
                 Bus bus = findBusByNumber(busNumber);
                 if (bus == null) {
                     System.out.println("Bus not found.");
-                    continue; // Prompt user again
+                    continue; 
                 }
-                break; // Bus number is valid and bus is found
+                break; 
             } catch (IllegalArgumentException e) {
                 System.out.println(e.getMessage());
             }
@@ -418,12 +418,12 @@ public class BusReservationSystem {
                 if (seatNumber < 1) {
                     throw new IllegalArgumentException("Seat number must be a positive integer.");
                 }
-                // Check if reservation exists
+                
                 Bus bus = findBusByNumber(busNumber);
                 Reservation reservation = findReservation(findCustomerByMobile(mobileNumber), bus, seatNumber);
                 if (reservation == null) {
                     System.out.println("Reservation not found.");
-                    continue; // Prompt user again
+                    continue; 
                 }
                 // Cancel reservation
                 bus.cancelSeat(seatNumber);
