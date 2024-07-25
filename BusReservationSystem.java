@@ -111,7 +111,7 @@ public class BusReservationSystem {
             try {
                 System.out.print("Enter Age: ");
                 if (!input.hasNextInt()) {
-                    input.next(); // consume invalid input
+                    input.next(); 
                     throw new InputMismatchException("Age should be an integer.");
                 }
                 age = input.nextInt();
@@ -122,7 +122,7 @@ public class BusReservationSystem {
                 break;
             } catch (InputMismatchException | IllegalArgumentException e) {
                 System.out.println(e.getMessage());
-                input.nextLine(); // clear the invalid input if any
+                input.nextLine(); 
             }
         }
 
@@ -154,14 +154,14 @@ public class BusReservationSystem {
                 if (totalSeats <= 0) {
                     throw new IllegalArgumentException("Total Seats must be a positive integer.");
                 }
-                input.nextLine(); // consume newline
+                input.nextLine(); 
                 break;
             } catch (InputMismatchException e) {
                 System.out.println("Total Seats must be an integer.");
-                input.nextLine(); // clear the invalid input
+                input.nextLine(); 
             } catch (IllegalArgumentException e) {
                 System.out.println(e.getMessage());
-                input.nextLine(); // clear the invalid input
+                input.nextLine(); 
             }
         }
 
@@ -173,7 +173,7 @@ public class BusReservationSystem {
                 if (fare < 0) {
                     throw new IllegalArgumentException("Fare cannot be negative.");
                 }
-                input.nextLine(); // consume newline
+                input.nextLine(); 
                 break;
             } catch (InputMismatchException e) {
                 System.out.println("Fare must be a number.");
