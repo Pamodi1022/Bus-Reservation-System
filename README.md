@@ -1,6 +1,6 @@
 # Bus Reservation System
 
-As a Computer Science undergraduate, I am excited to share my project on developing a Bus Reservation System. This project aims to create a user-friendly and efficient platform for customers to book and manage their bus tickets online.
+This project aims to create a user-friendly and efficient platform for customers to book and manage their bus tickets online.
 
 1.	Customer Registration: Customers can create an account by providing their name, mobile number, email ID, city, and age.
 2.	Bus Registration: Bus operators can register their buses by entering details such as bus number, total seats, starting and ending points, starting time, and fare.
