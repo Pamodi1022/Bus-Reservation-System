@@ -8,7 +8,7 @@ As a Computer Science undergraduate, I am excited to share my project on develop
 4.	Seat Reservation: Customers can reserve seats on their desired buses. Upon successful reservation, the customer and the next customer in the queue for that seat will be notified via message.
 5.	Reservation Management: Customers can cancel their reservations at any time. Cancellation notifications will be sent to the customer and the next customer in the queue for that seat.
 6.	Reservation Display: All reservations will be displayed for easy management and tracking.
-7.	
+   
 Data Structures and Algorithms:
 1.	Data Structures: I will analyze the scenario and create appropriate data structures to store and manage customer and bus information. I will also determine valid operations for these data structures.
 2.	Stack Operations: I will critically review how a stack can be used to implement different operations in the reservation system.
