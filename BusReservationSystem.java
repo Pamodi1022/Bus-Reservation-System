@@ -439,6 +439,7 @@ public class BusReservationSystem {
     }
 
 
+    //Show all reservations
     private static void showAllReservations() {
         if (reservations.isEmpty()) {
             System.out.println("No reservations found.");
@@ -449,6 +450,7 @@ public class BusReservationSystem {
         }
     }
 
+    //Find customer
     private static Customer findCustomerByMobile(String mobileNumber) {
         for (Customer customer : customers) {
             if (customer.getMobileNumber().equals(mobileNumber)) {
@@ -458,6 +460,7 @@ public class BusReservationSystem {
         return null;
     }
 
+    //Find Bus
     private static Bus findBusByNumber(String busNumber) {
         for (Bus bus : buses) {
             if (bus.getBusNumber().equals(busNumber)) {
@@ -467,6 +470,7 @@ public class BusReservationSystem {
         return null;
     }
 
+    //Find reservation
     private static Reservation findReservation(Customer customer, Bus bus, int seatNumber) {
         for (Reservation reservation : reservations) {
             if (reservation.getCustomer().equals(customer) &&
