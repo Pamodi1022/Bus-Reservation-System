@@ -1,4 +1,4 @@
-//Class
+//Class class
 public class Bus {
     private String busNumber;
     private int totalSeats;
